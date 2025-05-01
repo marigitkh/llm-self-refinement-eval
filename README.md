@@ -35,7 +35,7 @@ python run.py --model_path "google/gemma-2-2b-it" --input_path "data/asdiv.jsonl
 3. Analyze the accuracy before and after hint injection:
 
 ```
-python your_script.py --result_dir path/to/your/folder
+python analyze.py --result_dir path/to/your/folder
 ```
 
 ## Outputs
