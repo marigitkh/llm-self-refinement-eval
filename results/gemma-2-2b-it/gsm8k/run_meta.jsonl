@@ -1,1 +1,6 @@
-
+{
+  "model": "gemma-2-2b-it",
+  "dataset": "gsm8k",
+  "max_new_tokens": 128,
+  "date": "2025-03-01"
+}
