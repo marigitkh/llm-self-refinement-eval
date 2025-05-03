@@ -1,0 +1,5 @@
+# Requirements for llm-self-refinement project
+# Tested with Python 3.8+ and torch 1.13 / transformers 4.28
+
+torch>=1.13.1
+transformers>=4.28.0
