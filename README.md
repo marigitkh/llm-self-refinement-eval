@@ -1,21 +1,23 @@
 # Capstone Project: Do LLMs Know What/Where and Why They Lack?
 
-This project evaluates the self-refinement abilities of large language models (LLMs) by:
+This codebase was developed as part of a Bachelor’s capstone project in Data Science to investigate the self-refinement capabilities of large language models (LLMs).
+
+The project evaluates the self-refinement abilities of large language models (LLMs) by:
 - Solving math questions
 - Identifying incorrect answers
-- Generating hint sentences
+- Generating hint sentences given the correct answer
 - Re-solving the questions with injected hints
 - Measuring the improvement in accuracy
 
 ## Project Structure
 
 ```
-utils.py         # Prompt generation, extraction, validation functions
-data.py          # Loading and saving JSONL data
-inference.py     # Core logic: solving questions, generating hints (pure functions)
-run.py           # Main script to run the full pipeline (using argparse)
-analyze.py       # Script to calculate and display accuracy improvements
-results/         # Folder where output files will be saved
+src/utils.py         # Prompt generation, extraction, validation functions
+src/data.py          # Loading and saving JSONL data
+src/inference.py     # Core logic: solving questions, generating hints (pure functions)
+scripts/run.py       # Main script to run the full pipeline (using argparse)
+scripts/statistics.py# Script to calculate and display accuracy improvements
+results/             # Folder where output files will be saved
 ```
 
 ## How to Run
@@ -23,26 +25,57 @@ results/         # Folder where output files will be saved
 1. Install dependencies:
 
 ```
-pip install transformers torch
+pip install -r requirements.txt
 ```
 
-2. Run the main inference and self-correction pipeline:
+2. Run the full pipeline
+
+This will generate initial answers, hints, and post-hint answers:
 
 ```
-python run.py --model_path "google/gemma-2-2b-it" --input_path "data/asdiv.jsonl" --output_dir "./results" --max_samples 300
+python scripts/run.py \
+  --model_path <HF_MODEL_NAME> \
+  --input_path data/<DATASET>.jsonl \
+  --output_dir results/<MODEL_NAME>/<DATASET>
 ```
 
-3. Analyze the accuracy before and after hint injection:
+3. Analyze accuracy improvements
+Summarize initial vs. post-hint accuracy across all model/dataset folders:
 
 ```
-python analyze.py --result_dir path/to/your/folder
+python scripts/statistics.py \
+  --parent_dir results \
+  --output_file results/statistics.txt
 ```
 
-## Outputs
+**Note:** Always run these commands from the project root so that the src/ package is on Python’s import path.
 
+## Data, Prompts & Results
+
+### `data/`  
+Stores raw JSONL datasets for arithmetic reasoning benchmarks.
+- `gsm8k.jsonl`
+- `asdiv.jsonl`
+
+These files serve as inputs to the pipeline via the `--input_path` argument.
+
+---
+
+### `prompts/`  
+Stores text-based prompt templates for model interactions:  
+- `answer_prompt.txt` — template for initial answer generation  
+- `hint_prompt.txt` — template for “answer-free” hint generation  
+
+Editing these files adjusts how questions and hints are framed.
+
+---
+
+### `results/`  
+For each LLM/dataset pair the following results are saved:
 - `initial_results.jsonl` — Model's first-pass answers
 - `wrong_only.jsonl` — Subset of questions answered incorrectly
 - `hints.jsonl` — Hint sentences generated for incorrect answers
 - `corrected_results.jsonl` — Model's re-answers after receiving hints
 
+Specifically, `gsm8k.jsonl` and `asdiv.jsonl` were tested on `gemma-2-2b-it` and `phi-4-mini-instruct` in the scope of the research. 
 ---
