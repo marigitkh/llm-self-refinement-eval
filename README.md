@@ -52,7 +52,7 @@ python scripts/statistics.py \
 
 ## Data, Prompts & Results
 
-### `data/`  
+### data/
 Stores raw JSONL datasets for arithmetic reasoning benchmarks.
 - `gsm8k.jsonl`
 - `asdiv.jsonl`
@@ -61,7 +61,7 @@ These files serve as inputs to the pipeline via the `--input_path` argument.
 
 ---
 
-### `prompts/`  
+### prompts/  
 Stores text-based prompt templates for model interactions:  
 - `answer_prompt.txt` — template for initial answer generation  
 - `hint_prompt.txt` — template for “answer-free” hint generation  
@@ -70,7 +70,7 @@ Editing these files adjusts how questions and hints are framed.
 
 ---
 
-### `results/`  
+### results/  
 For each LLM/dataset pair the following results are saved:
 - `initial_results.jsonl` — Model's first-pass answers
 - `wrong_only.jsonl` — Subset of questions answered incorrectly
