@@ -1,6 +1,6 @@
 {
   "model": "gemma-2-2b-it",
   "dataset": "asdiv",
-  "max_new_tokens": 128,
+  "max_new_tokens": 256,
   "date": "2025-04-30"
 }
