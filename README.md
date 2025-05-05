@@ -76,6 +76,7 @@ For each LLM/dataset pair the following results are saved:
 - `wrong_only.jsonl` — Subset of questions answered incorrectly
 - `hints.jsonl` — Hint sentences generated for incorrect answers
 - `corrected_results.jsonl` — Model's re-answers after receiving hints
+- `statistics.txt` — Summary file reporting accuracy before and after hint injection
   
 Specifically, `gsm8k.jsonl` and `asdiv.jsonl` were tested on `gemma-2-2b-it` and `phi-4-mini-instruct` in the scope of the research.
 
