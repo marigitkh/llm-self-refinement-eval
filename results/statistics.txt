@@ -1,0 +1,15 @@
+Model/Dataset: gemma-2-2b-it/asdiv
+  Initial Accuracy: 1528/2023 = 75.53%
+  Post-Hint Accuracy on those initially wrong: 98/495 = 19.80%
+
+Model/Dataset: gemma-2-2b-it/gsm8k
+  Initial Accuracy: 521/1305 = 39.92%
+  Post-Hint Accuracy on those initially wrong: 153/784 = 19.52%
+
+Model/Dataset: phi-4-mini-instruct/asdiv
+  Initial Accuracy: 1935/2023 = 95.65%
+  Post-Hint Accuracy on those initially wrong: 16/88 = 18.18%
+
+Model/Dataset: phi-4-mini-instruct/gsm8k
+  Initial Accuracy: 1133/1305 = 86.82%
+  Post-Hint Accuracy on those initially wrong: 30/172 = 17.44%
