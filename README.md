@@ -1,4 +1,4 @@
-# Capstone Project: Do LLMs Know What/Where and Why They Lack?
+# Do LLMs Know What/Where and Why They Lack?
 
 This codebase was developed as a part of Bachelor’s capstone project in Data Science at American University of Armenia to investigate the self-refinement capabilities of large language models (LLMs).
 
