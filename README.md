@@ -42,14 +42,14 @@ As a result, the proportion of the questions which were answered correctly after
 
 ## How to Use
 
-1. Install dependencies:
+#### 1. Install dependencies:
 
 ```
 pip install -r requirements.txt
 ```
 <br>
 
-2. Run the full pipeline
+#### 2. Run the full pipeline
 
 This will generate initial answers, hints, and post-hint answers:
 
@@ -72,7 +72,7 @@ After running, you’ll find:
 - `hints.jsonl`  
 - `post_hint_inference.jsonl`  
 <br>
-3. Analyze accuracy improvements
+#### 3. Analyze accuracy improvements
 
 Summarize initial vs. post-hint accuracy across all model/dataset folders:
 
