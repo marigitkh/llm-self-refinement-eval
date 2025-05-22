@@ -72,6 +72,7 @@ After running, you’ll find:
 - `hints.jsonl`  
 - `post_hint_inference.jsonl`  
 <br>
+
 ### 3. Analyze accuracy improvements
 
 Summarize initial vs. post-hint accuracy across all model/dataset folders:
