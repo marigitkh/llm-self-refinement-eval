@@ -2,12 +2,9 @@
 
 This codebase was developed as a part of Bachelor’s capstone project in Data Science at American University of Armenia.
 
-The project **evaluates** the self-refinement abilities of large language models (LLMs) by:
-- Solving math questions
-- Identifying incorrect answers
-- Generating hint sentences given the correct answer
-- Re-solving the questions with injected hints
-- Measuring the improvement in accuracy
+The project **evaluates** the self-refinement abilities of large language models (LLMs) by 3 steps:
+![LLM Self-Refinement Pipeline](paper/figures/llm_self_refinement_pipeline.drawio.png)
+
 
 ## Project Structure
 
