@@ -2,7 +2,7 @@
 
 This codebase was developed as a part of Bachelor’s capstone project in Data Science at American University of Armenia.
 
-The project evaluates the self-refinement abilities of large language models (LLMs) by:
+The project **evaluates** the self-refinement abilities of large language models (LLMs) by:
 - Solving math questions
 - Identifying incorrect answers
 - Generating hint sentences given the correct answer
@@ -34,7 +34,11 @@ The project evaluates the self-refinement abilities of large language models (LL
 
   - `README.md` — project overview and instructions 
 
-  - `requirements.txt` — Python dependencies  
+  - `requirements.txt` — Python dependencies
+
+  - paper/ - complete capstone research paper
+    - `Do-the-LLMs-Know-What:Where-and-Why-They-Lack.pdf` — full final report
+    - figures/ — all figures referenced in the paper
 
 
 ## How to Use
