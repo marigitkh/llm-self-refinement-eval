@@ -3,8 +3,10 @@
 This codebase was developed as a part of Bachelor’s capstone project in Data Science at American University of Armenia.
 
 The project **evaluates** the self-refinement abilities of large language models (LLMs) by 3 steps:
+
 ![LLM Self-Refinement Pipeline](paper/figures/llm_self_refinement_pipeline.drawio.png)
 
+As a result, the proportion of the questions which were answered correctly after hint injection is calculated.
 
 ## Project Structure
 
